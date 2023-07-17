@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Share</title>
+</head>
+
+<body>
+    <% if(locals.filelink){%>
+        <a href="<%=filelink%>">
+            <%=filelink%>
+        </a>
+        <%}%>
+
+
+            <div style="width:550px;margin:100px auto;">
+                <h2>File Share</h2>
+                <br> <br>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <label for="">File</label>
+                    <input type="file" name="file" required>
+                    <br>
+                    <br>
+                    <label for="">password</label>
+                    <input type="text" name="password" min="3">
+                    <br>
+                    <br>
+                    <button type="submit" style="width:80%;margin:0 auto;">upload</button>
+                </form>
+            </div>
+</body>
+
+</html>
