@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }))
 
 const upload = multer({ dest: "uploads" })
 
-mongoose.connect(process.env.DATABASE_URL)
+mongoose.connect('mongodb+srv://admin-Ahsan:UYjdUQrEsTo5pPFy@cluster0.xa5t5.mongodb.net/educationalapp?retryWrites=true&w=majority')
 
 app.set("view engine", "ejs")
 
